@@ -1,0 +1,19 @@
+<!--tm.wxml-->
+
+<view class="team-join-container">
+<view class="team-join-item" wx:if="{{teamjoinlist && teamjoinlist.length>0}}" wx:for="{{teamjoinlist}}">
+  <view class="team-join-player">
+    <image class="team-join-icon" src="{{item.player_icon}}"></image>
+    <text class="team-join-nickname">{{item.player_name}}</text>
+  </view>
+  <text>申请加入</text>
+  <text>{{item.team_name}}</text>
+  <button class="team-join-accept" data-item="{{item}}" bindtap="acceptTeamJoin">批准</button>
+  <button class="team-join-reject" data-item="{{item}}" bindtap="rejectTeamJoin">拒绝</button>
+</view>
+<view wx:el class="empty-view">
+  <view>
+    <text>暂无球员申请加入</text>
+  </view>
+</view>
+</view>

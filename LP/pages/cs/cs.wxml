@@ -1,0 +1,8 @@
+<!--cs.wxml-->
+<contact-button 
+  type="default-light" 
+  size="20"
+  session-from="weapp"
+>
+客户服务
+</contact-button>

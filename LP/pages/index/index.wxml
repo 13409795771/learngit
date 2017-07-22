@@ -1,0 +1,37 @@
+<!--index.wxml-->
+
+<view class="container">
+  <view class="header">
+    <view class="header-info">
+      <text class="icon-header">有球踢了!赞</text>
+      <button bindtap="onSearch" class="search search-hint" size="default">搜索球队／球员／比赛</button>
+    </view>
+  </view>
+  <view class="index-menu">
+    <navigator class="index-menu-item" wx:for="{{indexmenu}}" wx:key="{{item.url}}" url="../{{item.url}}/{{item.url}}">
+      <image src="{{item.icon}}" mode="aspectFit" id="{{item.url}}"></image>
+      <text>{{item.text}}</text>
+    </navigator>
+  </view>
+  <view class="tab-menu">
+    <view class="tab-item tabs-container" wx:for="{{tabs}}">
+      <text id="{{item}}" bindtap="onClick" class="{{onTab == item ? 'tab-button-on':'tab-button-off'}}">{{item}}</text>
+    </view>
+  </view>
+  <view wx:if="{{onTab == '我的球队'}}">
+    <import src="../../templates/tlist.wxml" />
+    <template wx:if="{{teamRsp.teamlist && teamRsp.teamlist.length>0}}" is="teamlist" data="{{teamRsp}}"></template>
+    <view wx:else class="empty-view">
+      <view>
+        <text>你还没有加入任何球队</text>
+        <view bindtap="onJoin" class="btn-block">
+          <button class="btn-default btn-submit">加入球队</button>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <import src="../../templates/mlist.wxml" />
+    <template is="matchlist" data="{{matchRsp}}"></template>
+  </view>
+</view>

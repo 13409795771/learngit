@@ -1,0 +1,141 @@
+/**index.wxss**/
+
+.index-menu {
+  width: 100%;
+  height: 200rpx;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #fff;
+}
+
+.index-menu-item {
+  text-align: center;
+  width: 25%;
+  margin: 0;
+  margin-top: 4%;
+  margin-bottom: 4%;
+}
+
+.index-menu-item image {
+  width: 80rpx;
+  height: 80rpx;
+  padding:10rpx;
+  align-self: center;
+  border-radius: 50%;
+}
+
+#create {
+  background: #FF3030;
+}
+
+#join {
+  background: #4876FF;
+}
+
+#launch {
+  background: #EE7942;
+}
+
+#match {
+  background: #00C5CD;
+}
+
+.index-menu-item text {
+  display: block;
+  font-size: 24rpx;
+  line-height: 1.4;
+  white-space: nowrap;
+  color: #86939e;
+}
+
+.match-title {
+  color: #4dbce9;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+}
+
+.header {
+  color: white;
+  display: flex;
+  background: #4dbce9;
+  height: 300rpx;
+  align-items: center;
+}
+
+.header view {
+  text-align: center;
+  width: 100%;
+}
+
+.search {
+  margin: 40rpx;
+}
+
+.search-hint {
+  color: #86939e;
+}
+
+.icon-header:before {
+  background: url('https://pp2bb.cn/images/ic_app.png') no-repeat 80% 80% / 100% auto;
+}
+
+.header-info text:before {
+  content: '';
+  display: inline-block;
+  width: 50rpx;
+  height: 50rpx;
+  vertical-align: -10rpx;
+  margin-right: 10rpx;
+}
+
+.tab-menu {
+  width: 100%;
+  height: 60rpx;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+  background: #e1e8ee;
+}
+
+.tab-item {
+  flex: 1;
+  text-align: center;
+  margin: 2%;
+  margin-top: 6%;
+}
+
+.tab-button-on {
+  color: #4dbce9;
+  font-size: 32rpx;
+}
+
+.tab-button-off {
+  color: #86939e;
+  font-size: 32rpx;
+}
+
+.tabs-container {
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  background: lightgray;
+  margin: 0;
+}
+
+.empty-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30%;
+}
+
+.empty-view text {
+  color: #86939e;
+  font-size: 34rpx;
+}

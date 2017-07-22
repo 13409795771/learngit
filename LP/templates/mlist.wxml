@@ -1,0 +1,31 @@
+<template name="matchlist">
+<view class="container">
+<view class="conference-list" wx:if="{{matchRsp.matchlist && matchRsp.matchlist.length>0}}">
+  <navigator class="conference-item" wx:for="{{matchRsp.matchlist}}" wx:key="{{item.id}}" url="{{'../mdetail/mdetail?match_id='+item.id}}">
+    <view class="conference-item-text">
+      <view class="conference-item-title">{{'球队:'+item.team.name}}</view>
+      <view class="conference-item-info activity-item-info">
+        <text class="icon-time">{{item.start_date+' '+item.start_time}}</text>
+        <text class="icon-xinxi">{{'预定场地：'+(item.ground_typ=='0' ? "半场":"全场")}}</text>
+      </view>
+      <view class="conference-item-info activity-item-info">
+        <text class="icon-zuobiao">{{"地点:"+item.activity_address.place}}</text>
+        <text class="icon-count">{{'已报名' + item.playerlist.length+'人/' + item.all_plan + '人成行'}}</text>
+      </view>
+    </view>
+    <view id="{{item.id}}" bindtap="onMatch" class="btn-block" hidden="{{matchRsp.hiddenMatch}}">
+      <button class="btn-default">参加比赛</button>
+    </view>
+  </navigator>
+</view>
+
+<view wx:else class="empty-view">
+  <view>
+    <text>最近没有待参与的比赛</text>
+    <view bindtap="onLaunch" class="btn-block">
+      <button class="btn-default btn-submit">发起比赛</button>
+    </view>
+  </view>
+</view>
+</view>
+</template>

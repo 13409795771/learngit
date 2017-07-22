@@ -1,0 +1,29 @@
+<!--mdetail.wxml-->
+<view class="group-header">比赛详情</view>
+<form bindsubmit="onMatch" report-submit="true">
+
+  <view class="group-body">
+
+    <view class="input-list">
+      <view class="input-item" wx:for="{{items}}" wx:key="{{item.id}}">
+        <text class="input-item-label">{{item.tag}}</text>
+        <view class="input-item-content">
+          <text>{{item.value}}</text>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+  <view class="group-header">{{'已报名' + rsp.playerlist.length + '/'+rsp.all_plan}}</view>
+  <navigator class="player-container" wx:for="{{rsp.playerlist}}">
+    <view class="userinfo">
+      <image class="userinfo-avatar" src="{{item.player_icon}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{item.player_name}}</text>
+    </view>
+  </navigator>
+
+  <view class="btn-block" hidden="{{alreadyin}}">
+    <button formType="submit" class="btn-default btn-submit">参加比赛</button>
+  </view>
+</form>

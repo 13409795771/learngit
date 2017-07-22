@@ -1,0 +1,25 @@
+<template name="teamlist">
+  <view class="container">
+    <view class="conference-list">
+      <navigator class="conference-item" wx:for="{{teamRsp.teamlist}}" wx:key="{{item.id}}" url="{{'../tdetail/tdetail?team_id='+item.id}}">
+        <view class="conference-item-text">
+          <view class="conference-item-title">{{'球队:'+item.name}}</view>
+          <view class="conference-item-info activity-item-info">
+            <text class="icon-time">{{'创建日期:'+item.create_time}}</text>
+            <text class="icon-xinxi">{{"预定场地:"+(item.ground_type == '0' ? "半场":"全场")}}</text>
+          </view>
+          <view class="conference-item-info activity-item-info">
+            <text class="icon-zuobiao">{{"主场:" +item.activity_address.place}}</text>
+            <text class="icon-count">{{'已加入' + item.playerlist.length+'人/共招募' + item.all_plan + '人'}}</text>
+          </view>
+          <view class="conference-item-info activity-item-info">
+            <text class="icon-slogan">{{"球队宣言:"+item.slogan}}</text>
+          </view>
+          <view data-item="{{item}}" bindtap="onJoin" class="btn-block" hidden="{{teamRsp.hiddenJoin}}">
+            <button class="btn-default">加入球队</button>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</template>

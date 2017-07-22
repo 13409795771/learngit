@@ -1,0 +1,224 @@
+/**app.wxss**/
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.btn-block {
+  margin-top: 20rpx;
+  width: 100%;
+}
+
+.btn-default {
+  background: #4dbce9;
+  color: #fff;
+}
+
+.btn-submit {
+  margin: 20rpx;
+}
+
+/* pages/match/match.wxss */
+
+.activity-item-info {
+  justify-content: space-between;
+}
+
+.activity-item-info text {
+  color: #86939e;
+  flex: none;
+  font-size: 26rpx;
+}
+
+.conference-item-info text:before {
+  content: '';
+  display: inline-block;
+  width: 34rpx;
+  height: 34rpx;
+  vertical-align: -14rpx;
+  margin: 6rpx;
+}
+
+.icon-time:before {
+  background: url('https://pp2bb.cn/images/ic_date_range.png') no-repeat 50% 50% / 100% auto;
+}
+
+.icon-xinxi:before {
+  background: url('https://pp2bb.cn/images/ic_pie_chart.png') no-repeat 50% 50% / 100% auto;
+}
+
+.icon-count:before {
+  background: url('https://pp2bb.cn/images/ic_group_add.png') no-repeat 50% 50% / 100% auto;
+}
+
+.icon-zuobiao:before {
+  background: url('https://pp2bb.cn/images/ic_location_on.png') no-repeat 50% 50% / 100% auto;
+}
+
+.icon-slogan:before {
+  background: url('https://pp2bb.cn/images/ic_chat.png') no-repeat 50% 50% / 100% auto;
+}
+
+.conference-item {
+  padding: 20rpx;
+  border-bottom: 1rpx solid #e8e8e8;
+}
+
+.conference-item-title {
+  font-size: 30rpx;
+  color: #86939e;
+  margin-bottom: 10rpx;
+}
+
+.conference-item-info {
+  margin-top: 5rpx;
+  display: flex;
+}
+
+.conference-item-info text {
+  flex: 1;
+}
+
+.match-title {
+  color: #4dbce9;
+  font-size: 34rpx;
+  margin-left: 20rpx;
+}
+
+.group-header {
+  line-height: 70rpx;
+  display: flex;
+  padding: 0 20rpx;
+  background: #f9f9f9;
+}
+
+.group-body {
+  background: #fff;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.group-body .input-list {
+  margin: 0;
+  border: none;
+}
+
+input {
+  height: 60rpx;
+  line-height: 60rpx;
+  font-family: inherit;
+}
+
+.input-list {
+  padding: 0 20rpx;
+  margin: 20rpx 0;
+  background: #fff;
+  border-top: 1rpx solid #ddd;
+  border-bottom: 1rpx solid #ddd;
+}
+
+.input-list .input-item {
+  padding: 20rpx;
+  line-height: 2;
+  display: flex;
+  font-size: 30rpx;
+  border-top: 1rpx solid #e8e8e8;
+}
+
+.input-list .input-item:first-child {
+  border-top: 0;
+}
+
+.input-item-label {
+  display: block;
+  width: 5em;
+  color: #666;
+}
+
+.input-item-content {
+  color: #333;
+  flex: 1;
+}
+
+.input-item.input-item-full {
+  display: block;
+}
+
+.input-item.input-item-full .input-item-label {
+  width: 100%;
+}
+
+.input-item.input-item-full .input-item-content {
+  width: 100%;
+}
+
+.input-item.input-item-full textarea {
+  padding: 0;
+  height: 150rpx;
+  border: 1rpx solid #e8e8e8;
+  padding: 10rpx;
+}
+
+.input-item.input-item-full .img-upload {
+  padding: 0;
+}
+
+.input-item.input-item-adaption .input-item-label {
+  width: auto;
+  margin-right: 20rpx;
+}
+.nomore-view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:20rpx;
+  margin-bottom: 20rpx;
+}
+.nomore-view text {
+  color: #86939e;
+  font-size: 34rpx;
+}
+.empty-view{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top:70%;
+}
+.empty-view text {
+  color: #86939e;
+  font-size: 34rpx;
+}
+/* mdetail.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+    margin-right: 20rpx;
+    margin-left: 20rpx;
+    font-size:24rpx;
+    color: #aaa;
+}
+
+.player-container {
+    display: inline-block;
+    width: 20%;
+}
+

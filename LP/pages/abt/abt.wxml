@@ -1,0 +1,9 @@
+<!--abt.wxml-->
+<view class="abt-container">
+<view wx:for="{{items}}" class="abt-item">
+  <text class="abt-item-title">{{item.title}}</text>
+  <view>
+    <text class="abt-item-content">{{item.content}}</text>
+  </view>
+</view>
+</view>

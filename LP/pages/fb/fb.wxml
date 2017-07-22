@@ -1,0 +1,17 @@
+<!--fb.wxml-->
+<view class="fb-container">
+  <input class="fb-content" placeholder="请填写你的建议或意见" bindinput="bindInputContent"/>
+  <view class="fb-radio">
+    <text>请选择反馈类型</text>
+    <view>
+      <radio-group bindchange="bindRedioType">
+        <view wx:for="{{options}}" class="fb-radio-item" >
+
+          <radio value="{{item.value}}" checked="{{item.value == selected}}" color="#4dbce9" /> {{item.title}}
+        </view>
+      </radio-group>
+    </view>
+  </view>
+  <input class="fb-contact" placeholder="填写你的手机或邮箱" bindinput="bindInputContact"/>
+  <button bindtap="onSubmit" class="btn-submit btn-default ">提交</button>
+</view>

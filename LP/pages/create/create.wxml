@@ -1,0 +1,23 @@
+<!--pages/create/create.wxml-->
+<view class="group-header">球队信息</view>
+<form id="create_team" bindsubmit="onCreate" report-submit="true">
+  <view class="group-body">
+    <view class="input-list">
+      <view class="input-item" wx:for="{{items}}" wx:key="{{item.id}}">
+        <text class="input-item-label">{{item.tag}}</text>
+        <view class="input-item-content">
+          <input name="{{item.name}}" wx:if="{{item.type == 'text'}}" type="text" placeholder="{{item.hint}}" bindinput="{{item.inputEvent}}"></input>
+          <input name="{{item.name}}" wx:elif="{{item.type == 'number'}}" type="number" placeholder="{{item.hint}}" bindinput="{{item.inputEvent}}"></input>
+          <radio-group name="{{item.name}}" wx:elif="{{item.type == 'redio'}}" class="radio-group" bindchange="{{item.inputEvent}}">
+            <view wx:for="{{item.redioData}}">
+              <radio color="#4dbce9" value="{{item.value}}" checked="{{ground_type ?(ground_type == item.value):(item.value=='0')}}" />{{item.name}}
+            </view>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="btn-block">
+    <button formType="submit" class="btn-default btn-submit">创建球队</button>
+  </view>
+</form>

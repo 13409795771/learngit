@@ -1,0 +1,52 @@
+<!--pages/create/create.wxml-->
+<view wx:if="{{items[0].array.length > 0}}">
+  <view class="group-header">比赛信息</view>
+  <form bindsubmit="onLaunch" report-submit="true">
+    <view class="group-body">
+      <view class="input-list">
+        <view class="input-item" wx:for="{{items}}" wx:key="{{item.id}}">
+          <text class="input-item-label">{{item.tag}}</text>
+          <view class="input-item-content">
+            <input wx:if="{{item.type == 'text'}}" type="text" placeholder="{{item.hint}}" bindinput="{{item.inputEvent}}"></input>
+            <picker wx:if="{{item.type=='picker'}}" bindchange="{{item.inputEvent}}" value="{{item.index}}" range="{{item.array}}">
+              <view class="picker">
+                {{item.array[item.index]}}
+              </view>
+            </picker>
+            <input wx:elif="{{item.type == 'number'}}" type="number" placeholder="{{item.hint}}" bindinput="{{item.inputEvent}}"></input>
+
+            <radio-group wx:elif="{{item.type == 'redio'}}" class="radio-group" bindchange="{{item.inputEvent}}">
+              <view wx:for="{{item.redioDatas}}">
+                <radio color="#4dbce9" value="{{item.value}}" checked="{{ground_type ? (ground_type == item.value):(item.value=='0')}}" />{{item.name}}
+              </view>
+            </radio-group>
+
+            <view wx:elif="{{item.type == 'date_time'}}">
+              <picker mode="date" value="{{item.date}}" start="{{item.date}}" end="{{item.maxDate}}" bindchange="{{item.inputDateEvent}}">
+                <view class="picker">
+                  {{item.date}}
+                </view>
+              </picker>
+              <picker mode="time" value="{{item.time}}" start="00:00" end="23:59" bindchange="{{item.inputTimeEvent}}">
+                <view class="picker">
+                  {{item.time}}
+                </view>
+              </picker>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="btn-block">
+      <button formType="submit" class="btn-default btn-submit">发起比赛</button>
+    </view>
+    </form>
+</view>
+<view wx:else class="empty-view">
+  <view>
+    <text>你还没有加入任何球队</text>
+    <view bindtap="onJoin" class="btn-block">
+      <button class="btn-default btn-submit">加入球队 </button>
+    </view>
+  </view>
+</view>

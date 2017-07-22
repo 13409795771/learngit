@@ -1,0 +1,46 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/match/match",
+    "pages/my/my",
+    "pages/launch/launch",
+    "pages/join/join",
+    "pages/create/create",
+    "pages/discovery/discovery",
+    "pages/mdetail/mdetail",
+    "pages/tdetail/tdetail",
+    "pages/abt/abt",
+    "pages/fb/fb",
+    "pages/mm/mm",
+    "pages/tm/tm",
+    "pages/hm/hm",
+    "pages/cs/cs"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4dbce9",
+    "navigationBarTitleText": "球赞",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh":true
+  },
+  "tabBar": {
+    "color": "#86939e",
+    "selectedColor": "#4dbce9",
+    "borderStyle": "gray",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/ic_home.png",
+        "selectedIconPath": "images/ic_home_hover.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "images/ic_person.png",
+        "selectedIconPath": "images/ic_person_hover.png",
+        "text": "我的"
+      }
+    ]
+  }
+}

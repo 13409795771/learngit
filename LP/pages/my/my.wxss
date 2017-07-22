@@ -1,0 +1,55 @@
+/* pages/my/my.wxss */
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 400rpx;
+  padding-top: 100rpx;
+  background: url(https://pp2bb.cn/images/appbackground.jpg) no-repeat;
+  background-size: 100% 400rpx;
+}
+
+.userinfo-avatar {
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 50%;
+  border-width: 2rpx;
+  border-style: solid;
+  border-color: white;
+}
+
+.userinfo-nickname {
+  color: white;
+  font-size:36rpx;
+}
+
+.feature-list-container {
+  background-color: #e1e8ee;
+  position: absolute;
+  top: 400rpx;
+  bottom: 0;
+  left: 0;
+  right:0;
+  padding-top:50rpx;
+}
+.feature-list-item {
+  height: 60rpx;
+  background-color: white;
+  padding-left: 40rpx;
+  padding-bottom: 20rpx;
+  padding-top:25rpx;
+  margin-bottom: 2rpx; 
+}
+.feature-list-item text{
+  color:gray;
+  font-size: 30rpx;
+  align-content: center;
+}
+.feature-list-item image{
+  width:50rpx;
+  height: 50rpx;
+  margin-right: 30rpx;
+  vertical-align: -12rpx;
+}
